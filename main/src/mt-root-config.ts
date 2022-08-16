@@ -27,6 +27,12 @@ registerApplication({
   activeWhen: location => location.pathname === "/react-form",
 });
 
+registerApplication({
+  name: "@mt/react-lazy",
+  app: () => System.import("@mt/react-lazy"),
+  activeWhen: ["/react-lazy"],
+});
+
 start({
   urlRerouteOnly: true,
 });
