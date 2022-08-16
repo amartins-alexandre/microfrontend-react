@@ -1,44 +1,31 @@
 import { registerApplication, start } from "single-spa";
 
-registerApplication({
-  name: "@single-spa/welcome",
-  app: () =>
-    System.import(
-      "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
-    ),
-  activeWhen: location => location.pathname === "/",
-});
 
-registerApplication({
-  name: "@mt/single-react",
-  app: () => System.import("@mt/single-react"),
-  activeWhen: ["/react-single"],
-});
+type AppProps = {
+  name: string,
+  package: string,
+  activeWhen: string,
+  exact: boolean 
+}
 
-registerApplication({
-  name: "@mt/react-multiples",
-  app: () => System.import("@mt/react-multiples"),
-  activeWhen: ["/react-multiples"],
-});
+let mocky = 'https://run.mocky.io/v3/9c57f549-a315-43e8-bcc4-6a44360e6f7c'
 
-registerApplication({
-  name: "@mt/react-form",
-  app: () => System.import("@mt/react-form"),
-  activeWhen: location => location.pathname === "/react-form",
-});
 
-registerApplication({
-  name: "@mt/react-lazy",
-  app: () => System.import("@mt/react-lazy"),
-  activeWhen: ["/react-lazy"],
-});
-
-registerApplication({
-  name: "@mt/react-design-system",
-  app: () => System.import("@mt/react-design-system"),
-  activeWhen: ["/"],
-});
-
-start({
-  urlRerouteOnly: true,
-});
+fetch(mocky)
+  .then(resp => resp.json())
+  .then(data => {
+    data.applications.forEach((app: AppProps) => {
+      registerApplication({
+        name: app.name,
+        app: () => System.import(app.package),
+        activeWhen: app.exact 
+          ? location => location.pathname === app.activeWhen
+          : [app.activeWhen],
+      })
+    });
+  })
+  .finally(() => {
+    start({
+      urlRerouteOnly: true,
+    })
+  })
