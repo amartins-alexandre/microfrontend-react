@@ -12,7 +12,7 @@ registerApplication({
 registerApplication({
   name: "@mt/single-react",
   app: () => System.import("@mt/single-react"),
-  activeWhen: ["/single-react"]
+  activeWhen: ["/react-single"],
 });
 
 registerApplication({
@@ -31,6 +31,12 @@ registerApplication({
   name: "@mt/react-lazy",
   app: () => System.import("@mt/react-lazy"),
   activeWhen: ["/react-lazy"],
+});
+
+registerApplication({
+  name: "@mt/react-design-system",
+  app: () => System.import("@mt/react-design-system"),
+  activeWhen: ["/"],
 });
 
 start({
