@@ -8,7 +8,7 @@ type AppProps = {
   exact: boolean 
 }
 
-let mocky = 'https://run.mocky.io/v3/9c57f549-a315-43e8-bcc4-6a44360e6f7c'
+let mocky = 'https://run.mocky.io/v3/4600748a-90f0-483e-826b-c6032a273242'
 
 
 fetch(mocky)

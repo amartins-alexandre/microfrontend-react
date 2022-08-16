@@ -1,7 +1,7 @@
 {
   "name": "@mt/react-design-system",
   "scripts": {
-    "start": "webpack serve --port 8700",
+    "start": "webpack serve --port 8506",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently yarn:build:*",
     "build:webpack": "webpack --mode=production",

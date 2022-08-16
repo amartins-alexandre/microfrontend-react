@@ -1,7 +1,8 @@
 {
   "name": "@mt/react-lazy",
   "scripts": {
-    "start": "webpack serve --port 8500",
+    "dev": "webpack serve --port 8504",
+    "start": "webpack serve",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently yarn:build:*",
     "build:webpack": "webpack --mode=production",

@@ -1,0 +1,32 @@
+version: '3'
+networks:
+  mfr:
+    name: microfrontend
+    driver: bridge
+
+
+services:
+  root-config:
+    build: 
+      context: ./main
+      dockerfile: Dockerfile
+    ports: 
+      - 80:80
+    networks:
+      - mfr
+  react-design-system:
+    build: 
+      context: ./react-design-system
+      dockerfile: Dockerfile
+    ports:
+      - 8086:80
+    networks:
+      - mfr
+  # react-single:
+  #   build: 
+  #     context: ./single-react
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - 8081:80
+  #   networks:
+  #     - mfr
