@@ -21,6 +21,12 @@ registerApplication({
   activeWhen: ["/react-multiples"],
 });
 
+registerApplication({
+  name: "@mt/react-form",
+  app: () => System.import("@mt/react-form"),
+  activeWhen: location => location.pathname === "/react-form",
+});
+
 start({
   urlRerouteOnly: true,
 });
