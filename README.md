@@ -15,7 +15,7 @@ Micro Front-end **é um estilo arquitetônico que separa uma aplicação de fron
 Clone o projeto
 
 ```bash
-  git clone https://github.com/a2martins/microfrontend-react.git
+  git clone https://github.com/alexandremartinstech/microfrontend-react.git
 ```
 
 Entre no diretório do projeto
