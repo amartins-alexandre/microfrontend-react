@@ -1,10 +1,10 @@
 import React from "react"
-import App from '../layouts/App'
+import Navbar from '../components/Navbar'
 
 const Contact = () => (
-    <App>
+    <Navbar>
         <p>Contact</p>
-    </App>
+    </Navbar>
 )
 
 export default Contact

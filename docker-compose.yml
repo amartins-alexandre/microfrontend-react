@@ -22,11 +22,51 @@ services:
       - 8086:80
     networks:
       - mfr
-  # react-single:
-  #   build: 
-  #     context: ./single-react
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - 8081:80
-  #   networks:
-  #     - mfr
+  react-form:
+    build: 
+      context: ./react-form
+      dockerfile: Dockerfile
+    ports:
+      - 8084:80
+    networks:
+      - mfr
+  react-lazy:
+    build: 
+      context: ./react-lazy
+      dockerfile: Dockerfile
+    ports:
+      - 8085:80
+    networks:
+      - mfr
+  react-multiples:
+    build: 
+      context: ./react-multiples
+      dockerfile: Dockerfile
+    ports:
+      - 8082:80
+    networks:
+      - mfr
+  react-parcel:
+    build: 
+      context: ./react-parcel
+      dockerfile: Dockerfile
+    ports:
+      - 8083:80
+    networks:
+      - mfr
+  react-utility:
+    build: 
+      context: ./react-utility
+      dockerfile: Dockerfile
+    ports:
+      - 8600:80
+    networks:
+      - mfr
+  react-single:
+    build: 
+      context: ./single-react
+      dockerfile: Dockerfile
+    ports:
+      - 8081:80
+    networks:
+      - mfr

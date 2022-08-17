@@ -15,13 +15,13 @@ const App = ({ name }) => (
             <Link to="/react-single">Single</Link>
           </li>
           <li>
+            <Link to="/react-form">Form</Link>
+          </li>
+          <li>
             <Link to="/react-lazy">Lazy</Link>
           </li>
           <li>
             <Link to="/react-multiples">Multiples</Link>
-          </li>
-          <li>
-            <Link to="/react-route">Route</Link>
           </li>
         </ul>
       </nav>

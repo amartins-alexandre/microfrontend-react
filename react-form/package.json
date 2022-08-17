@@ -1,8 +1,7 @@
 {
   "name": "@mt/react-form",
   "scripts": {
-    "dev": "webpack serve --port 8504",
-    "start": "webpack serve",
+    "start": "webpack serve --port 8504",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently yarn:build:*",
     "build:webpack": "webpack --mode=production",
