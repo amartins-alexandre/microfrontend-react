@@ -64,7 +64,7 @@ services:
       - mfr
   react-single:
     build: 
-      context: ./single-react
+      context: ./react-single
       dockerfile: Dockerfile
     ports:
       - 8081:80

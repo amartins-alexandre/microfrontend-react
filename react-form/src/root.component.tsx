@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import Parcel from 'single-spa-react/parcel'
+import { useEffect, useState } from 'react'
 import { v4 as uuid } from 'uuid'
 //@ts-ignore
 import { emitEvent } from '@mt/react-utility'
 
-const Root = ({ name }) => {
+
+const Root = ({name, mountParcel}) => {
+  
   const [task, updateTask] = useState('')
 
   const handleChange = (event: any) => {
@@ -24,7 +25,16 @@ const Root = ({ name }) => {
     updateTask('')
   }
 
-  const MTReactParcel = new Parcel({config: () => System.import('@mt/react-parcel')})
+  useEffect(() => {
+    System.import('@mt/react-parcel').then(it => {
+      const domElement = document.querySelector("#table")
+      mountParcel(it, {domElement})
+    })
+  }, [])
+
+
+
+  // const MTReactParcel = new Parcel({ config: () =>  })
 
   return (
     <>
@@ -33,7 +43,7 @@ const Root = ({ name }) => {
         <input onChange={handleChange} value={task}/>
         <button>Add</button>
       </form>
-      {MTReactParcel.render()}
+      <div id="table"></div>
     </>
   )
 }
