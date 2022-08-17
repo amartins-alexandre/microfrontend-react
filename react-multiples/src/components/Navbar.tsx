@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from 'react-router-dom'
 
-const App = ({ children }) => (
+const Navbar = ({ children }) => (
   <main>
     <h1>@mt/react-multiples</h1>
     <nav>
@@ -15,7 +15,7 @@ const App = ({ children }) => (
         </li>
 
         <li>
-          <Link to="/contact">Home</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>
@@ -23,4 +23,4 @@ const App = ({ children }) => (
   </main>
 )
 
-export default App
+export default Navbar

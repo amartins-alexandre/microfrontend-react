@@ -10,6 +10,5 @@ module.exports = (webpackConfigEnv, argv) => {
   });
 
   return merge(defaultConfig, {
-    externals: ['react-router-dom'],
   });
 };

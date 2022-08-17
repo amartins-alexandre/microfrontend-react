@@ -1,10 +1,10 @@
 import React from "react"
-import App from '../layouts/App'
+import Navbar from '../components/Navbar'
 
 const About = () => (
-    <App>
+    <Navbar>
         <p>About</p>
-    </App>
+    </Navbar>
 )
 
 export default About
