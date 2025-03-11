@@ -33,4 +33,4 @@ Inicie o docker
 
 ## Autores
 
-- [@alexandremartinstech](https://www.github.com/alexandremartinstech)
+- [@amartins-alexandre](https://www.github.com/amartins-alexandre)
